@@ -1,0 +1,91 @@
+.container {
+  padding: 20px 8px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.title {
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search {
+  padding: 8px 20px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.beerList {
+  margin: 0 auto;
+
+  li:not(:first-child) {
+    margin-top: 4px;
+  }
+
+  a {
+    padding: 8px 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 1fr 50px;
+    transition: transform .25s, box-shadow .25s;
+
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateX(4px);
+      box-shadow: 2px 2px 3px -1px #ccc;
+    }
+
+    .img {
+      width: 40px;
+      height: 80px;
+      overflow: hidden;
+      object-fit: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100%;
+      }
+    }
+
+
+    h3 {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      display: inline-block;
+      max-width: 140ch;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      height: 3.2rem;
+
+      border-collapse: collapse;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      display: -webkit-box;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    span {
+      align-self: center;
+      font-size: 2rem;
+    }
+  }
+}
